@@ -67,3 +67,9 @@ map("v", ">", ">gv", {})
 -- find and replace
 map("n", "<leader>sr", ":%s/", { desc = "Find and replace in file" })
 map("v", "<leader>sr", ":s/", { desc = "Find and replace in file" })
+
+-- quickfix
+map("n", "<C-p>", ":cprevious<CR>", { desc = "Previous quickfix" })
+map("n", "<C-n>", ":cnext<CR>", { desc = "Next quickfix" })
+map("n", "<C-P>", ":cfirst<CR>", { desc = "First quickfix" })
+map("n", "<C-N>", ":clast<CR>", { desc = "Last quickfix" })

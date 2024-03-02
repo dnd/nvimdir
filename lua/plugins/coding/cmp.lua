@@ -29,15 +29,16 @@ return {
         { name = "buffer" },
       },
 
+      -- TODO: fix mappings to close on <CR> instead of select
       mapping = {
         ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i" }),
         ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i" }),
-        ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
-        ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+        ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+        ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
         ["<S-up>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
         ["<S-down>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
         ["<C-space>"] = cmp.mapping(cmp.mapping.complete(), { "i" }),
-        ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
+        ["<C-y>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
         ["<C-e>"] = cmp.mapping({
           i = cmp.mapping.abort(),
           c = cmp.mapping.close(),

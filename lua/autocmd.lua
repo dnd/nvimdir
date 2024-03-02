@@ -11,6 +11,14 @@ augroup("Telescope", function(g)
   })
 end)
 
+augroup("Ruby", function(g)
+  aucmd("FileType", {
+    group = g,
+    pattern = "ruby",
+    command = "setlocal indentkeys-=."
+  })
+end)
+
 augroup("NumberToggle", function(g)
   aucmd({ "BufEnter", "FocusGained" }, {
     group = g,

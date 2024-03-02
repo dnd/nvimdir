@@ -89,7 +89,7 @@ return {
               end
 
               if data == 0 then
-                vim.notify("Setting up ruby-lsp LSP handler", vim.log.levels.INFO, notify_opts)
+                vim.notify("Setting up ruby-lsp LSP handler", vim.log.levels.DEBUG, notify_opts)
                 lspconfig.ruby_ls.setup({
                   capabilities = capabilities,
                   -- on_attach = function(client, buffer)
